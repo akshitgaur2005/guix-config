@@ -3,45 +3,12 @@
 #+date: <2024-11-22 Fri>
 
 * Personal Guix System
-*What is Guix?*
+*What is Guix?* Go and [[https://guix.gnu.org/][read it]].
 
-** Daily Workflow
-- Track tasks and projects
-- Maintain a clear overview of commitments
-- Implement systematic review processes
-
-** Key Tools
-- Emacs
-- Org-mode
-- Git version control
+With this, you can clone this repo and have my exact* setup up and running.
+/Not exactly/, the ```.config``` folder is still not defined here.
 
 ** TODO List
 - [X] Set up initial configuration
-- [ ] Customize capture templates
-- [ ] Implement agenda views
-- [ ] Configure synchronization
-
-** Project Tracking
-*** Research Projects
-**** Machine Learning Study
-***** TODO Literature review
-***** TODO Methodology design
-***** IN-PROGRESS Data collection
-
-*** Open Source Contributions
-**** Guix System
-***** TODO Package maintenance
-***** WAITING Community review
-
-* Learning Goals
-** Technical Skills
-- Improve Lisp programming
-- Master functional programming concepts
-- Enhance system configuration skills
-
-** Personal Development
-- Practice consistent documentation
-- Develop systematic learning approach
-
-* Reflections
-Continuous improvement is the key to personal and professional growth.
+- [ ] Migrate #+begin-src bash .config #+end-src folder to within guix.
+- [ ] Implement org-babel.
