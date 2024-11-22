@@ -6,9 +6,13 @@
 *What is Guix?* Go and [[https://guix.gnu.org/][read it]].
 
 With this, you can clone this repo and have my exact* setup up and running.
-/Not exactly/, the ```.config``` folder is still not defined here.
+/Not exactly/, the .config folder is still not defined here.
 
 ** TODO List
 - [X] Set up initial configuration
-- [ ] Migrate #+begin-src bash .config #+end-src folder to within guix.
+- [ ] Migrate
+  #+begin_example
+  .config
+  #+end_example folder
+   to within guix.
 - [ ] Implement org-babel.
