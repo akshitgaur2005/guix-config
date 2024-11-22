@@ -8,20 +8,12 @@
              (gnu packages)
              (gnu services)
              (guix gexp)
+	     (gnu home services ssh)
              (gnu home services shells))
 
 (home-environment
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
-  (packages (specifications->packages (list
-                                            "flatpak"
-					    "btop"
-                                            "git"
-                                            "kitty"
-                                            "exfatprogs"
-					    "fish"
-                                            "librewolf"
-                                            "neovim")))
 
   ;; Below is the list of Home services.  To search for available
   ;; services, run 'guix home search KEYWORD' in a terminal.
@@ -31,8 +23,11 @@
                    (aliases '(("grep" . "grep --color=auto")
                               ("ip" . "ip -color=auto")
                               ("ll" . "ls -l")
+			      ("rust-shell" . "nix shell nixpkgs#rustup nixpkgs#gcc --extra-experimental-features nix-command --extra-experimental-features flakes")
                               ("ls" . "ls -p --color=auto")))
                    (bashrc (list (local-file "./.bashrc" "bashrc")))
                    (bash-profile (list (local-file "./.bash_profile"
                                                    "bash_profile")))
-		   )))))
+		   ))
+	  (service home-openssh-service-type)
+	 )))

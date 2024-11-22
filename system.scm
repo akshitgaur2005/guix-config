@@ -4,12 +4,22 @@
 (use-modules 
   (gnu) 
   (gnu services desktop)
+  (gnu services xorg)
   (nongnu packages linux)
   (nongnu system linux-initrd)
   (nongnu packages nvidia)
   (nongnu services nvidia)
 )
-(use-service-modules cups desktop networking ssh xorg)
+(use-service-modules cups desktop networking ssh xorg nix)
+(use-package-modules
+  wm
+  video
+  version-control
+  terminals
+  xdisorg
+  web-browsers
+  package-management
+)
 
 (operating-system
   (kernel linux)
@@ -32,16 +42,16 @@
                 %base-user-accounts))
 
   ;; Packages installed system-wide
-  (packages (append (list (specification->package "awesome")
-                         (specification->package "i3-wm")
-                         (specification->package "i3status")
-                         (specification->package "dmenu")
-                         (specification->package "st"))
-                   %base-packages))
+  (packages (append (map specification->package
+			 '("i3-wm" "i3status" "dmenu" "st"
+			   "hyprland" "wofi" "mako" "wireplumber" "pipewire"
+			   "mpv" "git" "nix"))
+		    %base-packages))
 
   ;; Services configuration
   (services (append
     (list 
+      (service nix-service-type)
       (service nvidia-service-type)
       ;; Configure GDM login manager
       (service gnome-desktop-service-type)
