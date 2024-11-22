@@ -1,0 +1,17 @@
+#+title: Akshit Gaur's Gory Guix Config
+#+author: Akshit Gaur
+
+* Welcome to my Guix Config
+
+**What is Guix?** Go and [[https://guix.gnu.org/ ][read]] it.
+
+With this, you can clone my repo and have the exact* same system up and running as me.
+ /Not exactly/, the
+ #+begin-src bash
+ .config
+ #+end_src
+ is still not defined here, will do it someday.
+
+** TODO list
+        - [x] Create basic guix config
+        - [] Port .config to it too.

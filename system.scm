@@ -62,12 +62,12 @@
         (modules (cons nvda %default-xorg-modules))
         (drivers '("nvidia"))))
       ;; Added OpenSSH service with updated configuration
-      ;;(service openssh-service-type
-      ;;         (openssh-configuration
-      ;;          (permit-root-login 'prohibit-password)
-      ;;          (password-authentication? #f)))
+      (service openssh-service-type
+               (openssh-configuration
+                (permit-root-login 'prohibit-password)
+                (password-authentication? #f)))
       ;; Added basic Tor service
-      ;; (service tor-service-type)
+      (service tor-service-type)
       )
     %desktop-services
     ;; Use desktop services but remove conflicting ones
