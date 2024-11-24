@@ -10,9 +10,5 @@ With this, you can clone this repo and have my exact* setup up and running.
 
 ** TODO List
 - [X] Set up initial configuration
-- [ ] Migrate
-  #+begin_example
-  .config
-  #+end_example folder
-   to within guix.
+- [ ] Migrate .config to within guix.
 - [ ] Implement org-babel.
